@@ -12,12 +12,12 @@ const db = require('knex')({
     }
 });
 
-const { handleRegister } = require('./route-handlers/register.cjs');
-const { handleSignin } = require('./route-handlers/signin.cjs');
-const { getProfile } = require('./route-handlers/profile.cjs');
-const { handleImage } = require('./route-handlers/image.cjs');
+const { handleRegister } = require('./controllers/register.cjs');
+const { handleSignin } = require('./controllers/signin.cjs');
+const { getProfile } = require('./controllers/profile.cjs');
+const { handleImage } = require('./controllers/image.cjs');
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors())
 
